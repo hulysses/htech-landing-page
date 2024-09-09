@@ -1,6 +1,6 @@
-import "../../styles/utility.css"
+import Card from "../../components/CardSolution"
 import "../../styles/solution.css"
-import Card from "../../components/Card"
+import "../../styles/utility.css"
 
 export default function Solution() {
     return (
@@ -31,7 +31,7 @@ export default function Solution() {
                 <Card 
                     imageUrl="https://cdn3d.iconscout.com/3d/premium/thumb/financial-contract-3d-icon-download-in-png-blend-fbx-gltf-file-formats--agreement-deal-pack-business-icons-8432858.png?f=webp"
                     title="Experiência de Avaliação Elevada"
-                    text="Nossa tecnologia transforma simples avaliações em momentos memoráveis. Desde feedback de clientes até pesquisas de satisfação, entregamos soluções sob medida que impulsionam a visibilidade da sua empresa."
+                    text="Com nossa tecnologia, simples avaliações se tornam momentos memoráveis. Entregamos soluções que aumentam a visibilidade da sua empresa, garantindo oportunidades de crescimento."
                 />
                 </section>
             </section>
