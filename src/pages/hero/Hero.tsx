@@ -1,7 +1,7 @@
-import Retangle1 from "../assets/images/Rectangle1.png"
-import Retangle2 from "../assets/images/Rectangle2.png"
-import Button from "../components/Button"
-import "../styles/hero.css"
+import Retangle1 from "../../assets/images/Rectangle1.png"
+import Retangle2 from "../../assets/images/Rectangle2.png"
+import Button from "../../components/Button"
+import "../../styles/hero.css"
 
 export default function Hero() {
     return (

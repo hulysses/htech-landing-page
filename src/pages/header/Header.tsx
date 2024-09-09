@@ -1,10 +1,10 @@
 import { useState } from "react";
-import "../styles/utility.css"
-import "../styles/header.css";
-import Logo from "../assets/logo.svg"
-import Menu from "../assets/menu.svg"
-import Close from "../assets/x.svg"
-import Button from "../components/Button"
+import "../../styles/utility.css"
+import "../../styles/header.css";
+import Logo from "../../assets/logo.svg"
+import Menu from "../../assets/menu.svg"
+import Close from "../../assets/x.svg"
+import Button from "../../components/Button"
 
 export default function Header() {
     const [showMobileMenu, setShowMobileMenu] = useState(false);
