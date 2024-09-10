@@ -1,0 +1,37 @@
+#pricing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 4rem;
+    gap: 5.75rem;
+}
+
+#pricing header {
+    display: grid;
+    gap: 1.5rem;
+    text-align: center;
+    max-width: 33rem;
+}
+
+#pricing p {
+    color: var(--second-text-color);
+}
+
+#pricing strong {
+    color: var(--primary-color);
+    font-weight: var(--fw-bold);
+}
+
+#pricing .even-columns {
+    gap: 2rem;
+}
+
+@media (width > 1280px) {
+    .container {
+        --max-width: 1050px;
+    }
+    #pricing header>span>h2 {
+        font-size: var(--fs-sm);
+        color: var(--primary-color);
+    }
+}

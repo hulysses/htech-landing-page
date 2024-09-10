@@ -1,0 +1,32 @@
+.cardPrice {
+    background: var(--light-gray);
+    box-shadow: #959da566 0 8px 24px;
+    width: 328px;
+    height: 480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 32px;
+    border-radius: 6px;
+    gap: 1rem;
+}
+
+.cardPrice h2 {
+    font-size: 3rem;
+}
+
+.cardPrice h3 {
+    font-size: 1.5rem;
+}
+
+.cardPrice .img {
+    width: 19px;
+    height: 14px;
+}
+
+.cardPrice hr {
+    height: 1px;
+    background-color: var(--primary-color);
+    width: 100%;
+    border: none;
+}

@@ -8,7 +8,7 @@
     padding-inline: 1.5rem;
     border-radius: 0.4rem;
     cursor: pointer;
-    border: solid transparent 0.15rem;
+    border: solid transparent 0.1rem;
 }
 
 .btn-primary:hover {
@@ -27,7 +27,7 @@
     padding-inline: 1.5rem;
     border-radius: 0.4rem;
     cursor: pointer;
-    border: solid var(--primary-color) 0.15rem;
+    border: solid var(--primary-color) 0.1rem;
 }
 
 .btn-secondary:hover {
