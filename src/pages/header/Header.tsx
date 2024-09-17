@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "../../styles/utility.css"
 import "../../styles/header.css";
 import Logo from "../../assets/logo.svg"
@@ -8,6 +8,18 @@ import Button from "../../components/Button"
 
 export default function Header() {
     const [showMobileMenu, setShowMobileMenu] = useState(false);
+
+    useEffect(() => {
+        if (showMobileMenu) {
+            document.documentElement.style.overflowY = "hidden";
+        } else {
+            document.documentElement.style.overflowY = "";
+        }
+    }, [showMobileMenu]);
+
+    const handleMenuClick = () => {
+        setShowMobileMenu(false);
+    };
 
     return (
         <>
@@ -45,22 +57,22 @@ export default function Header() {
                                 <div className="container flex">
                                     <ul>
                                         <li>
-                                            <a href="#">Home</a>
+                                            <a href="#" onClick={handleMenuClick}>Home</a>
                                         </li>
                                         <li>
-                                            <a href="#solution">Soluções</a>
+                                            <a href="#solution" onClick={handleMenuClick}>Soluções</a>
                                         </li>
                                         <li>
-                                            <a href="#testimonials">Depoimentos</a>
+                                            <a href="#testimonials" onClick={handleMenuClick}>Depoimentos</a>
                                         </li>
                                         <li>
-                                            <a href="#pricing">Preços</a>
+                                            <a href="#pricing" onClick={handleMenuClick}>Preços</a>
                                         </li>
                                         <li>
-                                            <a href="#contact">Contato</a>
+                                            <a href="#contact" onClick={handleMenuClick}>Contato</a>
                                         </li>
                                         <li>
-                                            <a className="reverse-color" href="#">Login</a>
+                                            <a className="reverse-color" href="#" onClick={handleMenuClick}>Login</a>
                                         </li>
                                     </ul>
                                     <span onClick={() => setShowMobileMenu(!showMobileMenu)} className="btn-wrapper">
@@ -77,5 +89,5 @@ export default function Header() {
                 </nav>
             </header>
         </>
-    )
+    );
 }
