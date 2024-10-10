@@ -1,5 +1,5 @@
-import "../../styles/utility.css"
-import "../../styles/contact.css"
+import "../../styles/contact.css";
+import "../../styles/utility.css";
 
 export default function Contact() {
     return (
@@ -11,10 +11,11 @@ export default function Contact() {
                         <span className="desktop-only">
                             <h2>Junte-se a nós</h2>
                         </span>
-                        <p>
-                            Problems trying to resolve the conflict between the two major realms of Classical physics: Newtonian mechanics 
-                        </p>
                     </span>
+                    <p>
+                        Problems trying to resolve the conflict between the two major
+                        realms of Classical physics: Newtonian mechanics
+                    </p>
                 </header>
             </section>
         </>
