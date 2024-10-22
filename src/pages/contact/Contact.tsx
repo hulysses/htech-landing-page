@@ -1,5 +1,6 @@
 import "../../styles/contact.css";
 import "../../styles/utility.css";
+import SubscribeForm from "../../components/SubscribeForm";
 
 export default function Contact() {
     return (
@@ -17,6 +18,7 @@ export default function Contact() {
                         realms of Classical physics: Newtonian mechanics
                     </p>
                 </header>
+                <SubscribeForm />
             </section>
         </>
     )
