@@ -1,4 +1,4 @@
-#testimonial {
+#testimonials {
     background-color: #B2E3FF;
     display: flex;
     flex-direction: column;
@@ -7,28 +7,28 @@
     gap: 5.75rem;
 }
 
-#testimonial header {
+#testimonials header {
     display: grid;
     gap: 1.5rem;
     text-align: center;
     max-width: 33rem;
 }
 
-#testimonial p {
+#testimonials p {
     color: var(--second-text-color);
 }
 
-#testimonial strong {
+#testimonials strong {
     color: var(--primary-color);
     font-weight: var(--fw-bold);
 }
 
-#testimonial img {
+#testimonials img {
     width: 100px;
     height: 100px;
 }
 
-#testimonial .even-columns {
+#testimonials .even-columns {
     gap: 2rem;
 }
 
@@ -36,7 +36,7 @@
     width: 100%;
 }
 
-#testimonial .even-columns {
+#testimonials .even-columns {
     display: flex;
     gap: 1rem;
     overflow-x: auto;
@@ -44,14 +44,14 @@
     padding-bottom: 1rem; 
 }
 
-#testimonial .card {
+#testimonials .card {
     flex: 0 0 auto;
     scroll-snap-align: center;
     width: 100%;
     max-width: 300px;
 }
 
-#testimonial .even-columns::-webkit-scrollbar {
+#testimonials .even-columns::-webkit-scrollbar {
     display: none;
 }
 
@@ -59,7 +59,7 @@
     .container {
         --max-width: 1050px;
     }
-    #testimonial header>span>h2 {
+    #testimonials header>span>h2 {
         font-size: var(--fs-sm);
         color: var(--primary-color);
     }

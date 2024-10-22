@@ -5,7 +5,7 @@ import "../../styles/utility.css"
 export default function Testimonial() {
     return (
         <>
-            <section id="testimonial" className="container containerWidth">
+            <section id="testimonials" className="container containerWidth">
                 <header>
                     <span>
                         <h2>Conselho de quem conhece</h2>

@@ -10,7 +10,6 @@ export default function SubscribeForm() {
 
     const handleSubmit = (event: React.FormEvent) => {
         event.preventDefault();
-        // Aqui você pode adicionar a lógica para enviar o email
         console.log("Email inscrito:", email);
     };
 

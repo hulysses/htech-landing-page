@@ -14,8 +14,7 @@ export default function Contact() {
                         </span>
                     </span>
                     <p>
-                        Problems trying to resolve the conflict between the two major
-                        realms of Classical physics: Newtonian mechanics
+                        Informe o seu melhor  e-mail para receber as melhores novidades e promoções.
                     </p>
                 </header>
                 <SubscribeForm />

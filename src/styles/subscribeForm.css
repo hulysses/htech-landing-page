@@ -1,7 +1,6 @@
 .subscribe-form {
     display: flex;
     max-width: 500px;
-    border: 2px solid red;
     border-radius: 4px;
     overflow: hidden;
 }
@@ -12,6 +11,9 @@
     border: none;
     outline: none;
     font-size: 1rem;
+    background-color: #F8F8F8;
+    border: 1px solid #E6E6E6;
+    width: 500px;
 }
 
 .subscribe-form button {
@@ -25,6 +27,8 @@
     transition: background-color 0.3s;
 }
 
-.subscribe-form button:hover {
-    background-color: darken(var(--primary-color), 10%);
+@media (max-width: 480px) {
+    .subscribe-form input {
+        width: 200px;
+    }
 }

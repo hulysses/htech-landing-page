@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import "../../styles/utility.css"
 import "../../styles/header.css";
-import Logo from "../../assets/logo.svg"
-import Menu from "../../assets/menu.svg"
-import Close from "../../assets/x.svg"
+import Logo from "../../assets/icons/logo.svg"
+import Menu from "../../assets/icons/menu.svg"
+import Close from "../../assets/icons/x.svg"
 import Button from "../../components/Button"
 
 export default function Header() {

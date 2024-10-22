@@ -5,6 +5,7 @@ import Solution from '../solution/Solution'
 import Testimonial from '../testimonial/Testimonial'
 import Pricing from '../pricing/Pricing'
 import Contact from '../contact/Contact'
+import Footer from '../footer/Footer'
 
 export default function Home() {
     return (
@@ -15,6 +16,7 @@ export default function Home() {
             <Testimonial />
             <Pricing />
             <Contact />
+            <Footer/>
         </>
     )
 }

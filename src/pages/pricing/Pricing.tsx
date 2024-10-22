@@ -1,4 +1,5 @@
 import Card from "../../components/CardPrice"
+import CardPrice from "../../components/CardPricePremium"
 import "../../styles/pricing.css"
 import "../../styles/utility.css"
 
@@ -15,19 +16,24 @@ export default function Pricing() {
                     </span>
                 </header>
                 <section className="even-columns">
-                    <Card 
+                    <Card
                         plan="Básico"
                         text="Baixe o ferramenta e comece a utilizar agora mesmo!"
                         price="Grátis"
                         benefits={["Com anúncios", "Até 10 produtos por dia", "Utilize sem limitação X"]}
                     />
-                    <Card 
+                    <CardPrice
                         plan="Premium"
-                        text="Baixe o ferramenta e comece a utilizar agora mesmo!"
-                        price="R$ 19,90"
-                        benefits={["Sem interrupção de anúncios", "Utilize quantas vezes quiser", "Utilize todos os produtos disponíveis na plataforma"]}
+                        text="Para quem deseja utilizar nossa ferramenta sem limitações!"
+                        price="R$ 19,90/mês"
+                        offer="1 MÊS GRÁTIS"
+                        benefits={[
+                            "Sem interrupção de anúncios",
+                            "Utilize quantas vezes quiser",
+                            "Utilize todos os produtos disponíveis na plataforma",
+                        ]}
                     />
-                    <Card 
+                    <Card
                         plan="Empresarial"
                         text="Utilize nossa soiução na sua empresa. Aprimore seu fluxo."
                         price="R$ 12,90"
