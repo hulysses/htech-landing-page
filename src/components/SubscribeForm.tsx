@@ -3,14 +3,20 @@ import "../styles/subscribeForm.css";
 
 export default function SubscribeForm() {
     const [email, setEmail] = useState("");
+    const [motivoContato, setMotivoContato] = useState("");
 
-    const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setEmail(event.target.value);
+    };
+
+    const handleMotivoContatoChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setMotivoContato(event.target.value);
     };
 
     const handleSubmit = (event: React.FormEvent) => {
         event.preventDefault();
         console.log("Email inscrito:", email);
+        console.log("Motivo de contato:", motivoContato);
     };
 
     return (
@@ -18,11 +24,18 @@ export default function SubscribeForm() {
             <input
                 type="email"
                 value={email}
-                onChange={handleInputChange}
+                onChange={handleEmailChange}
                 placeholder="Seu melhor Email"
                 required
             />
-            <button type="submit">Inscrever-se</button>
+            <input
+                type="text"
+                value={motivoContato}
+                onChange={handleMotivoContatoChange}
+                placeholder="Motivo do Contato"
+                required
+            />
+            <button type="submit">Enviar</button>
         </form>
     );
 }

@@ -8,13 +8,13 @@ export default function Contact() {
             <section id="contact" className="container">
                 <header>
                     <span>
-                        <h2>Receba as melhores novidades</h2>
+                        <h2>Envie sua dúvida</h2>
                         <span className="desktop-only">
-                            <h2>Junte-se a nós</h2>
+                            <h2>Entre em contao</h2>
                         </span>
                     </span>
                     <p>
-                        Informe o seu melhor  e-mail para receber as melhores novidades e promoções.
+                    Entre em contato, estamos dispostos a tirar qualquer dúvida,seja um orçamento, uma dúvida técnica de algum de nossos produtos.Estamos à disposição para responder.😎
                     </p>
                 </header>
                 <SubscribeForm />
