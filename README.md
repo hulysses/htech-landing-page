@@ -10,7 +10,7 @@ Consiste em uma landing page moderna e responsiva desenvolvida em React, focada 
 - Hero Section: Apresentação inicial com call-to-action
 - Soluções: Apresentação das principais soluções oferecidas
 - Depoimentos: Carrossel de testimoniais de clientes
---Planos e Preços: Diferentes opções de planos (Básico, Premium e Empresarial)
+- Planos e Preços: Diferentes opções de planos (Básico, Premium e Empresarial)
 - Formulário de Contato: Área para envio de dúvidas e contato
 - Design Responsivo: Adaptável a diferentes tamanhos de tela
 
