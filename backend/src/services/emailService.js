@@ -1,6 +1,6 @@
 import axios from "axios";
-import { cloudFunctionUrl } from './config.js';
-import { cloudToken } from './config.js'
+import { cloudFunctionUrl } from '../config/config.js';
+import { cloudToken } from '../config/config.js'
 
 export async function sendEmail(toMail, content) {
     const response = await axios.post(
