@@ -1,34 +1,47 @@
-import React, { useState } from 'react';
+import axios from 'axios';
 import "../styles/subscribeForm.css";
+import React, { useState } from 'react';
 
 export default function SubscribeForm() {
-    const [email, setEmail] = useState("");
-    const [motivoContato, setMotivoContato] = useState("");
+    const [toMail, setToMail] = useState("");
+    const [content, setContent] = useState("");
 
     const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setEmail(event.target.value);
+        setToMail(event.target.value);
     };
 
     const handleMotivoContatoChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setMotivoContato(event.target.value);
+        setContent(event.target.value);
     };
 
-    const handleSubmit = (event: React.FormEvent) => {
+    const handleSubmit = async (event: React.FormEvent) => {
         event.preventDefault();
+        try {
+            const response = await axios.post('http://localhost:3000/', { toMail, content });
+            if (response.status == 200) {
+                alert("Email enviado com sucesso!");
+                setToMail("");
+                setContent("");
+            } else {
+                alert("Erro ao enviar email.");
+            }
+        } catch (err) {
+            console.log(err)
+        }
     };
 
     return (
         <form onSubmit={handleSubmit} className="subscribe-form">
             <input
                 type="email"
-                value={email}
+                value={toMail}
                 onChange={handleEmailChange}
                 placeholder="Seu melhor Email"
                 required
             />
             <input
                 type="text"
-                value={motivoContato}
+                value={content}
                 onChange={handleMotivoContatoChange}
                 placeholder="Motivo do Contato"
                 required
