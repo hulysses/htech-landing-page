@@ -18,7 +18,7 @@ export default function SubscribeForm() {
         try {
             const response = await axios.post('/function-1', formData, {
                 headers: {
-                    'Authorization': `Bearer `
+                    'Authorization': `Bearer  `
                 }
             });
             return response.status === 200;
