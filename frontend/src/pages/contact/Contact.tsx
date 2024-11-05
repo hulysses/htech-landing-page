@@ -14,7 +14,7 @@ export default function Contact() {
                         </span>
                     </span>
                     <p>
-                    Entre em contato, estamos dispostos a tirar qualquer dúvida,seja um orçamento, uma dúvida técnica de algum de nossos produtos.Estamos à disposição para responder.😎
+                    Entre em contato, estamos dispostos a tirar qualquer dúvida, seja um orçamento, uma dúvida técnica de algum de nossos produtos.Estamos à disposição para responder.😎
                     </p>
                 </header>
                 <SubscribeForm />

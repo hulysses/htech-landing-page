@@ -1,43 +1,39 @@
-import Card from "../../components/CardPrice"
-import CardPrice from "../../components/CardPricePremium"
-import "../../styles/pricing.css"
-import "../../styles/utility.css"
+import "../../styles/pricing.css";
+import "../../styles/utility.css";
+import Card from "../../components/CardPrice";
 
 export default function Pricing() {
     return (
         <>
             <section id="pricing" className="container">
                 <header>
-                    <span>
-                        <h2>Planos e preços</h2>
-                        <span className="desktop-only">
-                            <h2>Nossos planos</h2>
-                        </span>
-                    </span>
+                    <p className="desktop-only">Planos e preços</p>
+                    <h2>Nossos planos</h2>
                 </header>
-                <section className="even-columns">
+                <section className="even-columns gap-1.5">
                     <Card
                         plan="Básico"
                         text="Baixe o ferramenta e comece a utilizar agora mesmo!"
                         price="Grátis"
-                        benefits={["Com anúncios", "Até 10 produtos por dia", "Utilize sem limitação X"]}
-                    />
-                    <CardPrice
+                        benefits={["Com anúncios", "Até 10 produtos por dia"]}
+                        featured={false}
+                        />
+                    <Card
                         plan="Premium"
                         text="Para quem deseja utilizar nossa ferramenta sem limitações!"
-                        price="R$ 19,90/mês"
-                        offer="1 MÊS GRÁTIS"
+                        price="R$ 19,90"
                         benefits={[
-                            "Sem interrupção de anúncios",
-                            "Utilize quantas vezes quiser",
+                            "1° Mês grátis",
                             "Utilize todos os produtos disponíveis na plataforma",
                         ]}
-                    />
+                        featured={true}
+                        />
                     <Card
                         plan="Empresarial"
                         text="Utilize nossa soiução na sua empresa. Aprimore seu fluxo."
                         price="R$ 12,90"
-                        benefits={["Com anúncios", "Até 10 produtos por dia", "Utilize sem limitação X"]}
+                        benefits={["Sem anúncios", "Até 100 produtos por dia"]}
+                        featured={false}
                     />
                 </section>
             </section>

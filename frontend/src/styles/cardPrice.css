@@ -1,32 +1,76 @@
 .cardPrice {
-    background: var(--light-gray);
-    box-shadow: #959da566 0 8px 24px;
-    width: 328px;
-    height: 480px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 32px;
-    border-radius: 6px;
-    gap: 1rem;
+    gap: 1.5rem;
+    align-self: center;
+    height: min-content;
+    padding: 1.5rem 1.5rem 3rem 1.5rem;
+    background-color: var(--light-gray);
+    border-radius: 1.5rem;
+    box-shadow: rgba(58, 68, 78, 0.2) 0px 12px 24px;
 }
 
-.cardPrice h2 {
-    font-size: 3rem;
-}
-
-.cardPrice h3 {
-    font-size: 1.5rem;
-}
-
-.cardPrice .img {
-    width: 19px;
-    height: 14px;
-}
-
-.cardPrice hr {
-    height: 1px;
+.hr {
+    height: 1.5px;
     background-color: var(--primary-color);
-    width: 100%;
-    border: none;
+    margin-block: 0.725rem;
+}
+
+.features {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.features img {
+    margin-right: 10px;
+}
+
+.plan {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.premium {
+    border: solid 0.2rem var(--primary-color);
+    padding: 0rem 1.5rem 3rem 1.5rem;
+
+    .plan>h3 {
+        color: var(--primary-color);
+    }
+}
+
+.bonus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    width: 65%;
+    height: 2.5rem;
+    align-self: center;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+
+    p {
+        font-size: 12px;
+        font-weight: var(--fw-md);
+        color: var(--light-text-color);
+    }
+}
+
+.price {
+    display: flex;
+    align-items: end;
+
+    p {
+        margin-left: 8px;
+        padding-bottom: 4px;
+    }
+}
+
+@media (width >=1280px) {
+    h3 {
+        font-size: 1.25rem;
+    }
 }

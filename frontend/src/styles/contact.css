@@ -36,7 +36,7 @@
         --max-width: 1050px;
     }
     #contact header>span>h2 {
-        font-size: var(--fs-sm);
+        font-size: var(--fs-base);
         color: var(--primary-color);
     }
 }

@@ -14,11 +14,11 @@
     gap: 1.5rem;
     padding-inline: 2rem;
     align-items: center;
-}
 
-.header :first-child {
-    color: var(--primary-color);
-    font-weight: var(--fw-bold);
+    :first-child {
+        color: var(--primary-color);
+        font-weight: var(--fw-bold);
+    }
 }
 
 p {
