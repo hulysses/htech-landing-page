@@ -1,0 +1,28 @@
+.card {
+    background: var(--light-gray);
+    box-shadow: #959da566 0 8px 24px;
+    max-width: 20.25rem;
+    min-height: 26rem;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    border-radius: 6px;
+    gap: 1.5rem;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+}
+
+.card p {
+    padding-inline: 1.5rem;
+}
+
+.card hr {
+    height: 6px;
+    background-color: var(--primary-color);
+    width: 100%;
+    border: none;
+}
