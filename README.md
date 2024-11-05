@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="frontend/src/assets/icons/logo.svg" alt="Logo HTecH" />
+  <img src="src/assets/icons/logo.svg" alt="Logo HTecH" />
 </div>
 
 # HTecH - Landing Page
