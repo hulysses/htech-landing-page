@@ -4,6 +4,6 @@
   publish = "dist"
 
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
+  from = "/function-1"
+  to = "https://us-central1-arch-lambda-htech.cloudfunctions.net/function-1"
   status = 200
