@@ -4,11 +4,9 @@ import InstagramIcon from "../../assets/icons/instagram.svg";
 import YoutubeIcon from "../../assets/icons/youtube.svg";
 import Logo from "../../assets/icons/logo.svg";
 
-
 export default function Footer() {
     return (
         <div>
-
             <footer className="footer">
                 <div className="container">
                     <div className="footer-content">
