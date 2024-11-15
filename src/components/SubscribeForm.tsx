@@ -18,7 +18,7 @@ export default function SubscribeForm() {
         try {
             const response = await axios.post('/function-1', formData, {
                 headers: {
-                    'Authorization': `Bearer ${process.env.GOOGLE_FUNCTION_TOKEN}`
+                    'Authorization': `Bearer `
                 }
             });
             return response.status === 200;
@@ -43,7 +43,6 @@ export default function SubscribeForm() {
     }
     return (
         <form onSubmit={handleSubmit} className="subscribe-form" aria-label="Formulário de Inscrição">
-            <label htmlFor="toMail">Email:</label>
             <input
                 type="email"
                 id="toMail"
@@ -53,7 +52,6 @@ export default function SubscribeForm() {
                 placeholder="Seu melhor Email"
                 required
             />
-            <label htmlFor="content">Motivo do Contato:</label>
             <input
                 type="text"
                 id="content"
