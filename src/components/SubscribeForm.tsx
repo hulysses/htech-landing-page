@@ -18,12 +18,12 @@ export default function SubscribeForm() {
         try {
             const response = await axios.post('/function-1', formData, {
                 headers: {
-                    'Authorization': `Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjFkYzBmMTcyZThkNmVmMzgyZDZkM2EyMzFmNmMxOTdkZDY4Y2U1ZWYiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJhY2NvdW50cy5nb29nbGUuY29tIiwiYXpwIjoiNjE4MTA0NzA4MDU0LTlyOXMxYzRhbGczNmVybGl1Y2hvOXQ1Mm4zMm42ZGdxLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwiYXVkIjoiNjE4MTA0NzA4MDU0LTlyOXMxYzRhbGczNmVybGl1Y2hvOXQ1Mm4zMm42ZGdxLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwic3ViIjoiMTA4Mzk3NjY0NzgwNTY0ODUzNTM0IiwiZW1haWwiOiJodWx5c3Nlc21hZ2FAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiJFVVNaTi1uTkhIVVlMVENjTHJ0NzVnIiwibmJmIjoxNzMxMzMyNjcxLCJpYXQiOjE3MzEzMzI5NzEsImV4cCI6MTczMTMzNjU3MSwianRpIjoiMTAzZjM3YWQxN2U4ZDQ1ZjhiYjcwM2JmMTk1NGQ5YzFhNDQzMWE1YiJ9.Lvus6NdEPh1XuAY47D_BXSzI-qOkcY9lcQz5Q5jc5ejBjbaXpQuWfzhsvw8v5zkgHq441L9AbxEXQBJZpES7i6WwCTBTRUzuGE4oMmea6ZJDz4kUm5dadApvvgjOEaJXm9WmJLW2uhi9R1jcXWb7dXlNTEq4pxWCkDFPGXjL2I6GyAOXjtkVH-Nu0tB_1hGAE2JkIOXpjkGa-AQVxJDKItF_SsqU2jYR3mU6FFuCslYBNCd51pwTBV6HS4ouKDIhreddWo0kSFc6P2yMG9XWlMw1PSwFdnqWnLHYQMsUkS2WGd87sq3RI6s2tvFfpyvRCoURjiOGz_Q4bFJnppcMXg`
+                    'Authorization': `Bearer ${process.env.GOOGLE_FUNCTION_TOKEN}`
                 }
             });
             return response.status === 200;
         } catch (err) {
-            console.error("Erro ao enviar email:", err);
+            console.error("Erro ao enviar email:", err)
             throw new Error("Erro ao enviar email.");
         }
     };
@@ -43,16 +43,20 @@ export default function SubscribeForm() {
     }
     return (
         <form onSubmit={handleSubmit} className="subscribe-form" aria-label="Formulário de Inscrição">
+            <label htmlFor="toMail">Email:</label>
             <input
                 type="email"
+                id="toMail"
                 name="toMail"
                 value={formData.toMail}
                 onChange={handleChange}
                 placeholder="Seu melhor Email"
                 required
             />
+            <label htmlFor="content">Motivo do Contato:</label>
             <input
                 type="text"
+                id="content"
                 name="content"
                 value={formData.content}
                 onChange={handleChange}
