@@ -1,67 +1,68 @@
-import axios from 'axios';
-import Button from './Button';
+import React from "react";
+import Button from "./Button";
 import "../styles/subscribeForm.css";
-import React, { useState } from 'react';
+import { useForm } from "../hooks/useForm";
+import { sendEmail } from "../services/emailService";
+
+/**
+ *
+ * Este componente renderiza um formulário de contato que permite aos usuários
+ * enviar seu email e o motivo do contato. Utiliza o hook useForm para gerenciar
+ * o estado do formulário e o serviço emailService para realizar a requisição de envio de email.
+ *
+ */
+export interface FormData {
+  toMail: string;
+  content: string;
+}
 
 export default function SubscribeForm() {
-    const [formData, setFormData] = useState({
-        toMail: "",
-        content: ""
-    });
+  // Utiliza o hook personalizado para gerenciamento do formulário
+  const { formData, handleChange, resetForm } = useForm<FormData>({
+    toMail: "",
+    content: "",
+  });
 
-    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        const { name, value } = event.target;
-        setFormData(prevData => ({ ...prevData, [name]: value }));
-    };
+  const handleSubmit = async (event: React.FormEvent) => {
+    event.preventDefault();
 
-    const sendEmail = async () => {
-        try {
-            const response = await axios.post('/function-1', formData, {
-                headers: {
-                    'Authorization': `Bearer `
-                }
-            });
-            return response.status === 200;
-        } catch (err) {
-            console.error("Erro ao enviar email:", err)
-            throw new Error("Erro ao enviar email.");
-        }
-    };
-
-    const handleSubmit = async (event: React.FormEvent) => {
-        event.preventDefault();
-
-        try {
-            const success = await sendEmail();
-            if (success) {
-                alert("Email enviado com sucesso!");
-                setFormData({ toMail: "", content: "" });
-            }
-        } catch {
-            alert("Erro ao enviar email");
-        };
+    try {
+      // Chama a função sendEmail do serviço dedicado
+      const success = await sendEmail(formData);
+      if (success) {
+        alert("Email enviado com sucesso!");
+        resetForm();
+      }
+    } catch {
+      alert("Erro ao enviar email");
     }
-    return (
-        <form onSubmit={handleSubmit} className="subscribe-form" aria-label="Formulário de Inscrição">
-            <input
-                type="email"
-                id="toMail"
-                name="toMail"
-                value={formData.toMail}
-                onChange={handleChange}
-                placeholder="Seu melhor Email"
-                required
-            />
-            <input
-                type="text"
-                id="content"
-                name="content"
-                value={formData.content}
-                onChange={handleChange}
-                placeholder="Motivo do Contato"
-                required
-            />
-            <Button text='Enviar' />
-        </form>
-    );
+  };
+
+  return (
+    <form
+      onSubmit={handleSubmit}
+      className="subscribe-form"
+      aria-label="Formulário de Inscrição"
+    >
+      <input
+        type="email"
+        id="toMail"
+        name="toMail"
+        value={formData.toMail}
+        onChange={handleChange}
+        placeholder="Seu melhor Email"
+        required
+      />
+      <input
+        type="text"
+        id="content"
+        name="content"
+        value={formData.content}
+        onChange={handleChange}
+        placeholder="Motivo do Contato"
+        required
+      />
+      <Button text="Enviar" />
+    </form>
+  );
 }
