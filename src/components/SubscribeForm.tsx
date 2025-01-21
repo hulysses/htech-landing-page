@@ -40,7 +40,7 @@ export default function SubscribeForm() {
 
   return (
     <form
-      onSubmit={handleSubmit}
+      // onSubmit={handleSubmit}
       className="subscribe-form"
       aria-label="Formulário de Inscrição"
     >

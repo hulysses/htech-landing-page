@@ -2,10 +2,7 @@
   <img src="src/assets/icons/logo.svg" alt="Logo HTecH" />
 </div>
 
-# HTecH - Landing Page
-
-![React](https://img.shields.io/badge/React-17.0.2-blue.svg)
-![TypeScript](https://img.shields.io/badge/TypeScript-4.5.4-blue.svg)
+# HTecH
 
 ## 📋 Sobre o Projeto
 
@@ -19,6 +16,10 @@ HTecH é uma landing page moderna e responsiva desenvolvida com **React**, **Typ
 - **Planos e Preços:** Diferentes opções de planos (Básico, Premium e Empresarial).
 - **Formulário de Contato:** Área para envio de dúvidas e contato.
 - **Design Responsivo:** Adaptação a diferentes tamanhos de tela.
+
+<div align="center">
+    <img src="./public/images/htech.png" alt="Sorteia Aí" /> 
+</div
 
 ## 🛠️ Tecnologias Utilizadas
 
@@ -58,8 +59,4 @@ O projeto está hospedado na Netlify: [https://htechh.netlify.app/](https://htec
 
 ## 👤 Autor
 
-Desenvolvido por Hulysses na aula de Programação Web 💙
-
-<hr>
-
-Feito com ❤️ usando React e muito café! ☕
+Desenvolvido por Hulysses com ❤️ usando React e muito café! ☕
